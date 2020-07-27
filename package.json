@@ -1,0 +1,22 @@
+{
+  "name": "rixongile-manyobe-222-memory-game-in-vanilla",
+  "version": "1.0.0",
+  "description": "Memory game in vanilla js (222) For raw project instructions see: https://raw.githubusercontent.com/Umuzi-org/tech-department/master/content/projects/memory-game-vanilla/_index.md",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Umuzi-org/Rixongile-Manyobe-222-memory-game-in-vanilla-js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Umuzi-org/Rixongile-Manyobe-222-memory-game-in-vanilla-js/issues"
+  },
+  "homepage": "https://github.com/Umuzi-org/Rixongile-Manyobe-222-memory-game-in-vanilla-js#readme",
+  "dependencies": {
+    "jasmine": "^3.5.0"
+  }
+}
