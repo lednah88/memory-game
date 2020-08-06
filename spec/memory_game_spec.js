@@ -1,4 +1,4 @@
-const{startGame, flipper, shuffle, flipCard} =require("../src/memory_game")
+const{startGame} =require("../src/memory_game")
 const jsdom = require("jsdom");
 function memoryGame() {
   document.getElementById("board").innerHTML = "Memory Game";
@@ -19,7 +19,5 @@ describe("html", function() {
   it("should be able to start a game",function(){
     expect(startGame()).not.toBeNull()
   }) 
-  it("should be able to flipCard a game",function(){
-    expect(flipCard()).not.toBeNull()
-  })
+  
 })

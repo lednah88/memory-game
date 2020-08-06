@@ -52,4 +52,4 @@ function flipper(card, number) {
     document.getElementById("board").innerHTML =
       '<h1>🥇<u>Well done! you won</u>🥇</h1></br><button onclick="startGame()">Start New Game...</button>';
 }
-module.exports ={startGame, flipper, shuffle, flipCard}
+module.exports ={startGame}
