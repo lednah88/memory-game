@@ -3,14 +3,13 @@ let pair = [];
 let cardIds = [];
 let flippedCards = 0;
 
-function shuffle(array) {
-  for (let i = array.length - 1; i > 0; i--) {
+function shuffle(numbers) {
+  for (let i = numbers.length - 1; i > 0; i--) {
     let newPosition = Math.floor(Math.random() * (i + 1));
-    [array[i], array[newPosition]] = [array[newPosition], array[i]];
+    [numbers[i], numbers[newPosition]] = [numbers[newPosition], numbers[i]];
   }
-  return array;
+  return numbers;
 }
-
 function startGame() {
   flippedCards = 0;
   let cardDiv = "";
@@ -53,3 +52,4 @@ function flipper(card, number) {
     document.getElementById("board").innerHTML =
       '<h1>🥇<u>Well done! you won</u>🥇</h1></br><button onclick="startGame()">Start New Game...</button>';
 }
+module.exports ={startGame, flipper, shuffle, flipCard}

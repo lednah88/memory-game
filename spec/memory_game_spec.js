@@ -1,32 +1,25 @@
+const{startGame, flipper, shuffle, flipCard} =require("../src/memory_game")
 const jsdom = require("jsdom");
-const { JSDOM } = jsdom;
-describe("index.html", () => {
-  var browser;
-  beforeEach(() => {
-    JSDOM.fromFile("../src/index.html", {
+function memoryGame() {
+  document.getElementById("board").innerHTML = "Memory Game";
+}
 
-    }).then((res) => {
-      browser = res;
-      done();
-    });
+describe("html", function() {
+  beforeEach(function() {
+    const dom = new jsdom.JSDOM('<html><body id="board">Start New Game</body></html>');
+    global.document = dom.window.document;
+    global.window = dom.window;
+    global.navigator = dom.window.navigator;
+	})
+  it("should update dom", function() {
+    expect(global.document.getElementById("board").innerHTML).toBe('Start New Game');
+    memoryGame();
+    expect(global.document.getElementById("board").innerHTML).toBe("Memory Game");
   });
-  afterEach(() => {
-    browser.window.close();
-  });
-  it("should have a h1 elemet", () => {
-    var h1 = browser.window.document.querySelector("h1");
-    expect(h1).not.toBeNull();
-  });
-  it("should have a div elemet", () => {
-    var div = browser.window.document.querySelector("div");
-    expect(div).not.toBeNull();
-  });
-  it("should have a script elemet", () => {
-    var script = browser.window.document.querySelector("script");
-    expect(script).not.toBeNull();
-  });
-  it("should have an array of numbers",()=>{
-    JSDOM.fromFile("../src/memory_game.js")
-    expect(numbers).toBeDefined()
+  it("should be able to start a game",function(){
+    expect(startGame()).not.toBeNull()
+  }) 
+  it("should be able to flipCard a game",function(){
+    expect(flipCard()).not.toBeNull()
   })
-});
+})
