@@ -1,0 +1,44 @@
+#header{
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px; 
+ }
+ #board > div{
+       background: red;
+     border: blueviolet 5px solid;
+     width:100px;
+     height:100px;
+     float:left;
+     margin:10px;
+     padding:20px;
+     font-size:64px;
+     cursor:pointer;
+     text-align:center;
+  }  
+   #board{
+       background: black;
+         width:680px;
+       height:500px;
+         border-radius:10px;
+       border:blueviolet 7px solid;
+       padding:20px;
+       margin: auto;
+   }
+   
+   #board > h1 {
+      color: blue;
+       font-size: 250%;
+       text-align: center;
+   }
+   
+   button{
+       background: red;
+       border-radius: 10px;
+       border: blueviolet 7px solid;
+       display: block;
+       width: 300px;
+       margin: auto;
+       font-size: 150%;
+       font-weight: 900;
+       padding: 10px;
+   }
